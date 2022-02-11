@@ -5,8 +5,8 @@ export default {
     root: pathDest,
 
     html: {
-        src: pathSrc + '/html/*.html',
-        watch: pathSrc + '/html/**/*.html',
+        src: pathSrc + '/*.html',
+        watch: pathSrc + '/**/*.html',
         dest: pathDest
     },
 
@@ -23,7 +23,7 @@ export default {
     },
 
     img: {
-        src: pathSrc + '/img/*.{png,jpg,jpeg,gif,svg}',
+        src: pathSrc + '/img/**/*.{png,jpg,jpeg,gif,svg}',
         watch: pathSrc + '/img/**/*.{png,jpg,jpeg,gif,svg}',
         dest: pathDest + '/img'
     },
