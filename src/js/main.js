@@ -1,5 +1,6 @@
 import $ from "jquery";
 import 'slick-carousel'
+import { Fancybox, Carousel, Panzoom } from "@fancyapps/ui"
 
 $(function () {
     $('.header__btn').on('click', function () {

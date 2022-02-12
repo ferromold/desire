@@ -1,6 +1,9 @@
 const isProd = process.argv.includes('--production')
 const isDev = !isProd
 
+const webpackIf = isProd ? 'production' : 'development'
+const webpackDev = 'development'
+
 export default {
     isProd: isProd,
     isDev: isDev,
@@ -10,7 +13,7 @@ export default {
     },
 
     webpack: {
-        mode: isProd ? 'production' : 'development'
+        mode: webpackDev
     },
 
     imagemin: {

@@ -21,6 +21,7 @@
     "@babel/core": "^7.17.2",
     "@babel/preset-env": "^7.16.11",
     "@babel/register": "^7.17.0",
+    "@fancyapps/ui": "^4.0.25",
     "browser-sync": "^2.27.7",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
