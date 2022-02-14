@@ -23,4 +23,10 @@ $(function () {
         dots: true,
         arrows: false,
     })
+
+    $('.article-slider__box').slick({
+        prevArrow: '<button type="button" class="article-slider__arrow article-slider__arrow--left"><img src="img/back.svg" alt=""></button>',
+        nextArrow: '<button type="button" class="article-slider__arrow article-slider__arrow--right"><img src="img/next.svg" alt=""></button>',
+    })
 })
+
