@@ -235,12 +235,14 @@
 .breadcrumbs{
     background: rgba(#DFDFDF, .5);
     padding: 13px 14px;
+    position: relative;
+    z-index: 1;
     &__list{
         display: flex;
     }
     &__item::after{
         content: '/';
-        margin-left: -4px;
+        margin-left: 0;
         margin-right: 4px;
     }
     &__item:last-child::after{
@@ -619,7 +621,8 @@
         font-size: 36px;
         line-height: 60px;
         padding-bottom: 22px;
-        margin-bottom: 22px;position: relative;
+        margin-bottom: 22px;
+        position: relative;
         &::after{
             content: '';
             position: absolute;
@@ -735,10 +738,156 @@
     margin-bottom: 72px;
 }
 
+.map{
+    margin-top: -53px;
+    margin-bottom: 40px;
+}
 
+.contact{
+    padding-bottom: 100px;
+    &__title{
+        color: $title;
+        @extend %title-font;
+        font-size: 36px;
+        line-height: 60px;
+        padding-bottom: 25px;
+        margin-bottom: 40px;
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #6d7278;
+        }
+    }
+    &__social-box{
+        margin-left: 284px;
+    }
+    &__social{
+        margin-bottom: 21px;
+        display: flex;
+    }
+    &__social-item{
+        padding-right: 40px;
+    }
+    &__text{
+        color: #A1A1A1;
+        margin-bottom: 16px;
+    }
+    &__phone{
+        color: #5A5A5A;
+        line-height: 27px;
+    }
+    &__city{
+        margin-bottom: 16px;
+    }
+    &__form{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__email{
+        font-weight: 600;
+        font-size: 14px;
+        color: $title;
+        padding-left: 30px;
+        display: inline-block;
+        position: relative;
+        margin-bottom: 24px;
+        &::before{
+            content: '';
+            position: absolute;
+            background-image: url("../img/envelope.svg");
+            left: 0;
+            top: 9px;
+            width: 16px;
+            height: 12px;
+        }
+    }
+    &__form-input{
+        width: 49%;
+        padding: 6px 18px 6px 18px;
+        border-radius: 21px;
+        background-color: transparent;
+        border: 1px solid rgba(#A1A1A1, .7);
+        margin-bottom: 13px;
+        &::placeholder{
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 27px;
+            color: #A1A1A1;
+        }
+    }
+    &__form-area{
+        width: 100%;
+        padding: 14px 17px;
+        border-radius: 24px;
+        background-color: transparent;
+        border: 1px solid rgba(#A1A1A1, .7);
+        min-height: 125px;
+        resize: none;
+        margin-bottom: 20px;
+        &::placeholder{
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 27px;
+            color: #A1A1A1;
+        }
+    }
+    &__form-btn{
+        background-color: $title;
+        border: none;
+        border-radius: 21px;
+        color: #fffff0;
+        font-weight: 600;
+        padding: 6px 12px;
+        min-width: 181px;
+        cursor: pointer;
+    }
+}
 
-
-
+.contact-slider{
+    padding: 0 25px;
+    margin-bottom: 100px;
+    &__link{
+        position: relative;
+        &:hover{
+            .contact-slider__title{
+                opacity: 1;
+            }
+        }
+        margin-bottom: 20px;
+    }
+    &__img{
+        height: 170px;
+        width: 170px;
+        object-fit: cover;
+    }
+    &__title{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(#fff, .6);
+        font-size: 16px;
+        color: $title;
+        @extend %title-font;
+        max-width: 95%;
+        text-align: center;
+        opacity: 0;
+        transition: all .5s;
+    }
+}
 
 
 
